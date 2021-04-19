@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Javascript: Simply Dummy Text</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+
+  <!-- Google Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@700;800;900&display=swap">
+  <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+
+  <!-- Font Awsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <!-- Custom CSS Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="video-wrapper">
+    <h1 class="display-3">Video with Preloader & Custom Control</h1>
+    <p class="lead">Click on the Switch button to Play & Pause the background Video 🙂!</p>
+    
+    <video muted autoplay loop class="mainVideo">
+      <source src="sample_video.mp4" type="video/mp4" />
+    </video>
+
+    <button class="btnSwitch active">
+      <div class="play-pause">
+        <span>Play</span>
+        <span>Pause</span>
+      </div>      
+      <span class="switchBall"></span>
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

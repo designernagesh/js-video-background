@@ -1,0 +1,131 @@
+*{
+  box-sizing: border-box;
+  margin: 0;  padding: 0;
+}
+body{
+  background: #F1F1F1;
+}
+.container{
+  background: #FFF;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px rgba(0,0,0, 0.2);
+  padding: 30px; min-height: 300px;
+}
+h1{
+  text-align: center;
+  font-family: 'Saira Extra Condensed', sans-serif; 
+  font-size: 72px;
+}
+p.lead{
+  font-family: 'Yellowtail', cursive;
+  font-size: 24px;
+  position: relative;
+  z-index: 9;
+}
+p.lead::after{
+  position: absolute;
+  content: '';
+  width: 75px;
+  height: 4px;
+  background-color: #dc3545;  
+  bottom: -15px;
+  left: 50%;
+  transform: translate(-50%);  
+}
+.video-wrapper{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFF;  
+  flex-direction: column;
+  text-align: center;
+}
+.video-wrapper::after{
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;  
+}
+.video-wrapper h1{
+  position: relative;
+  z-index: 3;
+}
+.mainVideo{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.btnSwitch{
+  width: 120px;
+  height: 40px;
+  font-size: 12px;
+  position: absolute;
+  z-index: 2;
+  background-color: #FFF;
+  border-radius: 5px;  
+  cursor: pointer;
+  border: none;
+  bottom: 100px;
+  right: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.btnSwitch .play-pause{  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.btnSwitch .play-pause span{  
+  width: 50%;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+}
+.btnSwitch span.switchBall{  
+  background-color: #dc3545;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px; height: 40px;
+  z-index: 5;
+  border-radius: 5px;  
+  transform: translateX(60px);
+  transition: transform 0.3s;
+}
+.btnSwitch.active span.switchBall{
+  transform: translateX(0);
+}
+.btnSwitch:focus{
+  outline: none
+}
+
+/*/////////////////////////////////////////////////////////////
+  [ Responsive CSS Starts Here ]
+*/
+@media(max-width: 600px){
+  .container{
+    width: 90%;
+  }
+  .display-3 {
+    font-size: 2.5rem;
+  }
+  p.lead {  
+    font-size: 21px;
+  }
+}
